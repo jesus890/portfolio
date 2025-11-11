@@ -1,0 +1,95 @@
+{
+  "name": "my-web",
+  "version": "0.1.0",
+  "description": "Aplicación de escritorio React + Electron",
+  "author": "React",
+  "private": true,
+  "dependencies": {
+    "@azure/msal-browser": "^4.13.2",
+    "@azure/msal-react": "^3.0.13",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@heroui/date-picker": "^2.3.22",
+    "@heroui/react": "^2.7.11",
+    "@heroui/theme": "^2.4.17",
+    "@internationalized/date": "^3.8.2",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
+    "@react-aria/i18n": "^3.12.10",
+    "@reduxjs/toolkit": "^2.8.2",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.13.2",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
+    "framer-motion": "^12.23.6",
+    "html2canvas": "^1.4.1",
+    "jszip": "^3.10.1",
+    "or": "^0.2.0",
+    "react": "^19.1.0",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.66.0",
+    "react-imask": "^7.6.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.2",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
+  },
+  "main": "public/electron.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron": "electron .",
+    "dist": "npm run build && electron-builder",
+    "electron-dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "build": {
+    "appId": "com.miempresa.miapp",
+    "productName": "Mi App React Desktop",
+    "files": [
+      "build/**/*",
+      "public/electron.js",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12",
+    "electron-is-dev": "^3.0.1",
+    "tailwindcss": "^3.4.17",
+    "wait-on": "^8.0.4"
+  }
+}

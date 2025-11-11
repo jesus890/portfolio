@@ -1,0 +1,120 @@
+.custom-input-wrapper-date {
+  background: transparent !important;
+  width: 208px !important;
+}
+
+
+.custom-base-date-license {
+  border-radius: 0.5rem;
+  display: block; 
+  display: inline-block; /* mejor que block para que no afecte mucho layout */
+  background-color: #484d50;
+  border: 1px solid #373b3d;
+}
+
+.custom-input-date-license {
+  font-size: 12px !important;
+  display: block;
+}
+
+.custom-input-date-license,
+.custom-input-date-license * {
+  color: #fffcfc !important;
+}
+
+
+.custom-base-date {
+  border-radius: 0.5rem;
+  display: block; 
+  width: 225px !important;
+  background-color: #484d50;
+  border: 1px solid #373b3d;
+}
+
+.custom-input-date {
+  font-size: 12px !important;
+}
+
+.custom-input-date,
+.custom-input-date * {
+  color: #fffcfc !important;
+}
+
+.custom-input-wrapper-date {
+  background: transparent !important;
+  width: 208px !important;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(95%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.50s ease-out forwards;
+}
+
+
+/* Cambiar color de fondo de los días intermedios en el rango */
+/*
+[data-selected="true"][data-range-selection="true"]:not([data-selection-start="true"]):not([data-selection-end="true"])::before {
+  background-color: #fdd835 !important;
+}
+
+[data-selected="true"][data-range-selection="true"]:not([data-selection-start="true"]):not([data-selection-end="true"]) {
+  color: #000 !important;
+}*/
+
+
+
+#grupo_maquina {
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+#grupo_maquina.flipped {
+  transform: rotateY(180deg);
+}
