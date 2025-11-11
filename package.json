@@ -48,7 +48,11 @@
     "build": "react-scripts build",
     "electron": "electron .",
     "dist": "npm run build && electron-builder",
-    "electron-dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "test": "react-scripts test --env=jsdom"
   },
   "build": {
     "appId": "com.miempresa.miapp",
@@ -89,6 +93,8 @@
     "electron": "^38.0.0",
     "electron-builder": "^26.0.12",
     "electron-is-dev": "^3.0.1",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
     "tailwindcss": "^3.4.17",
     "wait-on": "^8.0.4"
   }
